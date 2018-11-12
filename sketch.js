@@ -1,14 +1,11 @@
-// Daniel Shiffman
-// http://codingtra.in
-// http://patreon.com/codingtrain
-// Code for: https://youtu.be/17WoOqgXsRM
+
 var stars = [];
 var img;
-
 var speed;
 function preload(){
   img = loadImage('logo.png')
 }
+console.log(screen.width)
 
 function setup() {
 	myCanvas = createCanvas(screen.width, screen.height);
@@ -27,11 +24,20 @@ function draw() {
 		stars[i].update();
 		stars[i].show();
 	}
-	textAlign(CENTER);
-	textSize(40);
-	text('Welcome to', -135, 10);
-	fill(0, 102, 153);
+  if(screen.width > 440){
+    textAlign(CENTER);
+    textSize(40);
+    text('Welcome to', -135, 10);
+    fill(0, 102, 153);
+    imageMode(CENTER);
+    image(img, 100, 0, 240, 80);
+  }
+  else
+  textAlign(CENTER);
+  textSize(40);
+  text('Welcome to',0 , -40);
   imageMode(CENTER);
-  image(img, 100, 0, 240, 80);
+  image(img, 1, 30, 240, 80);
+
 
 }
