@@ -32,12 +32,11 @@ function draw() {
     imageMode(CENTER);
     image(img, 100, 0, 240, 80);
   }
-  else
-  textAlign(CENTER);
-  textSize(40);
-  text('Welcome to',0 , -40);
-  imageMode(CENTER);
-  image(img, 1, 30, 240, 80);
-
-
+  else{
+    textAlign(CENTER);
+    textSize(40);
+    text('Welcome to',0 , -40);
+    imageMode(CENTER);
+    image(img, 1, 30, 240, 80);
+  }
 }
